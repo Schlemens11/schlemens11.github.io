@@ -339,3 +339,103 @@ main {
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   7. KONTAKTFORMULAR STYLES (kontakt.html)
+   ========================================================================== */
+.contact-section {
+    max-width: 650px; /* Begrenzt die Breite für bessere Lesbarkeit und Fokus */
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.contact-intro {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-form {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Einzelne Formular-Gruppen für saubere Abstände untereinander */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Label steht über dem Eingabefeld */
+    gap: 8px;
+}
+
+/* Label Styling */
+.contact-form label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.required {
+    color: #c0392b; /* Rotes Sternchen für Pflichtfelder */
+    margin-left: 2px;
+}
+
+/* Eingabefelder und Textarea Styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 2px solid #ccc; /* Dickere Rahmenlinie für bessere Erkennbarkeit */
+    border-radius: 4px;
+    background-color: var(--bg-white);
+    color: var(--text-color);
+    transition: border-color 0.2s;
+}
+
+/* Visuelles Feedback beim Fokussieren (Wichtig für Barrierefreiheit) */
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+    outline: none;
+    border-color: var(--focus-ring);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+}
+
+/* Verhindert horizontales Verzerren des großen Textfelds */
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Absendeknopf */
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Volle Breite auf Mobile, gut klickbar */
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Optimierung für größere Bildschirme: Button schrumpft auf natürliche Breite */
+@media (min-width: 480px) {
+    .btn-submit {
+        width: auto;
+        display: inline-block;
+    }
+}
