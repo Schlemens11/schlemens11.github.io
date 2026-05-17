@@ -439,3 +439,78 @@ main {
         display: inline-block;
     }
 }
+
+/* ==========================================================================
+   8. ABOUT US & MARKEN STYLES (about.html)
+   ========================================================================== */
+.about-hero {
+    margin-bottom: 30px;
+}
+
+.about-lead {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+.brand-intro {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.brand-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.brand-card {
+    background-color: var(--bg-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary-color); /* Visueller Akzent im Corporate Design */
+}
+
+.brand-card h3 {
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.brand-meta {
+    background-color: var(--bg-light);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.brand-meta p {
+    margin-bottom: 5px;
+}
+
+.brand-meta p:last-child {
+    margin-bottom: 0;
+}
+
+.brand-explanation {
+    line-height: 1.7;
+}
+
+.legal-disclaimer-box {
+    background-color: #e8f4fd; /* Sanfter Blauton für rechtliche Hinweise */
+    border: 1px solid #b8daff;
+    color: #004085;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 40px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
