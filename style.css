@@ -71,6 +71,10 @@ button:focus-visible {
     padding: 15px 20px;
 }
 
+.header-container a {
+    text-decoration: none;
+}
+
 .logo-area {
     display: flex;
     align-items: center;
@@ -238,5 +242,100 @@ main {
     .footer-nav ul {
         flex-direction: column;
         gap: 12px;
+    }
+}
+
+/* ==========================================================================
+   6. EINKAUFSWAGEN SPECIFIC STYLES (cart.html)
+   ========================================================================== */
+.cart-section h1 {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Das zweigeteilte Layout via Flexbox */
+.cart-item {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 40px; /* Abstand zwischen linker und rechter Hälfte */
+    padding: 30px;
+    align-items: center;
+}
+
+/* Linke Hälfte */
+.cart-item-image-container {
+    flex: 1; /* Nimmt die Hälfte des Platzes ein */
+    max-width: 450px;
+}
+
+.cart-item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Rechte Hälfte */
+.cart-item-details {
+    flex: 1; /* Nimmt die andere Hälfte des Platzes ein */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item-title {
+    font-size: 1.8rem;
+    color: #111;
+}
+
+.cart-item-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.cart-item-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* Kauf-Button im Einkaufswagen (Klickaufforderung verstärkt durch etwas mehr Padding) */
+.btn-checkout {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start; /* Verhindert, dass der Button die volle Breite einnimmt */
+    transition: background-color 0.2s;
+}
+
+.btn-checkout:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Responsive Anpassung: Auf kleinen Bildschirmen untereinander anzeigen */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .cart-item-image-container {
+        max-width: 100%;
+    }
+    
+    .btn-checkout {
+        width: 100%; /* Auf Mobile lässt sich ein voller Button leichter klicken */
+        text-align: center;
     }
 }

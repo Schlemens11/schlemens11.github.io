@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toaster Tycoon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Skip-Link für Barrierefreiheit (Screenreader / Tastaturnutzer) -->
+    <!-- <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a> -->
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html">
+                <div class="logo-area">
+                    <!-- Platzhalter für die Toaster Tycoon Wortbildmarke -->
+                    <img src="img/logo.png" alt="Toaster Tycoon Logo" class="logo-img">
+                    <span class="logo-text">Toaster Tycoon</span>
+                </div>
+            </a>
+            
+            <nav class="cart-nav">
+                <a href="cart.html" class="cart-link" aria-label="Einkaufswagen, aktuell 1 Artikel">
+                    <span class="cart-icon" aria-hidden="true">🛒</span> Einkaufswagen
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="cart-section" aria-label="Ihr Einkaufswagen">
+            <h1>Ihr Einkaufswagen</h1>
+            
+            <!-- Die zweigeteilte Struktur für den Einkaufswagen-Artikel -->
+            <article class="cart-item">
+                
+                <!-- Linke Hälfte: Das Bild -->
+                <div class="cart-item-image-container">
+                    <img src="img/toaster_2.jpg" alt="The Classic Tycoon - Edelstahl-Toaster im Retro-Design" class="cart-item-image">
+                </div>
+                
+                <!-- Rechte Hälfte: Die Details und der Kaufknopf -->
+                <div class="cart-item-details">
+                    <h2 class="cart-item-title">Toaster 2 Name</h2>
+                    
+                    <p class="cart-item-description">
+                        [Beschreibung]
+                    </p>
+                    
+                    <p class="cart-item-price" aria-label="Preis: 49,99 Euro">16,99 €</p>
+                    
+                    <!-- Da es sich um den finalen Kauf im Einkaufswagen handelt, ist das der "Checkout"-Button -->
+                    <a href="checkout.html">
+                        <button class="btn-checkout" aria-label="Bestellvorgang für The Classic Tycoon für 16,99 Euro starten">
+                            Jetzt kostenpflichtig bestellen
+                        </button>
+                    </a>
+                </div>
+
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Toaster Tycoon GmbH. Alle Rechte vorbehalten.</p>
+            <nav class="footer-nav" aria-label="Rechtliche Informationen">
+                <ul>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="barrierefreiheit.html">Barrierefreiheitserklärung</a></li>
+                    <li><a href="urheberrecht.html">Urheberrechtserklärung</a></li>
+                    <li><a href="lizenz.html">Lizenzbedingungen</a></li>
+                    <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
