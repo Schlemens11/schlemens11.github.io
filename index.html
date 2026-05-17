@@ -1,20 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="de">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warning Page</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./img/favicon-warning.png" type="image/x-icon">
-  </head>
+    <title>Toaster Tycoon | Premium Toaster Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <main>
-        <h1>Lorem ipsum</h1>
-        <p>[Infos]</p>
-        <a href="landing.html">
-            <button>Weiter zur Webseite</button>
-        </a>
+    <!-- Skip-Link für Barrierefreiheit (Screenreader / Tastaturnutzer) -->
+    <!-- <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a> -->
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <!-- Platzhalter für die Toaster Tycoon Wortbildmarke -->
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Toaster Tycoon Logo" class="logo-img">
+                </a>
+                <span class="logo-text">Toaster Tycoon</span>
+            </div>
+            <nav class="cart-nav">
+                <a href="cart.html" class="cart-link" aria-label="Einkaufswagen, aktuell 0 Artikel">
+                    <span class="cart-icon" aria-hidden="true">🛒</span> Einkaufswagen
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1 style="font-family: Boldonse;">Wiederhergerichtete Toaster bereit für Wiederverwendung</h1>
+            <p>Kaufen Sie sich einen gebrauchten Toaster - Repariert und bereit für ein zweites Leben.</p>
+        </section>
+
+        <section class="product-section" aria-label="Unsere Toaster Produkte">
+            <div class="product-grid">
+                
+                <!-- Produkt 1 -->
+                <article class="product-card">
+                    <img src="img/toaster_1.jpg" alt="Edelstahl-Toaster im Retro-Design mit zwei Schlitzen" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">The Classic Tycoon</h2>
+                        <p class="product-price">13,99 €</p>
+                        <button class="btn-buy" aria-label="The Classic Tycoon für 49,99 Euro kaufen">Kaufen</button>
+                    </div>
+                </article>
+
+                <!-- Produkt 2 -->
+                <article class="product-card">
+                    <img src="img/toaster_2.jpg" alt="Moderner schwarzer Toaster mit Touch-Display und LED-Anzeige" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Tycoon Digital Touch</h2>
+                        <p class="product-price">16,99 €</p>
+                        <button class="btn-buy" aria-label="Tycoon Digital Touch für 89,99 Euro kaufen">Kaufen</button>
+                    </div>
+                </article>
+
+                <!-- Produkt 3 -->
+                <article class="product-card">
+                    <img src="img/toaster_3.jpg" alt="Luxuriöser Toaster mit echter 24 Karat Blattgold-Verzierung" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">The Golden Luxury</h2>
+                        <p class="product-price">23,99 €</p>
+                        <button class="btn-buy" aria-label="The Golden Luxury für 249,99 Euro kaufen">Kaufen</button>
+                    </div>
+                </article>
+
+                <!-- Produkt 4 -->
+                <article class="product-card">
+                    <img src="img/toaster_4.jpg" alt="Familien-Toaster aus gebürstetem Alu mit vier Schlitzen" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Tycoon Family Size</h2>
+                        <p class="product-price">17,99 €</p>
+                        <button class="btn-buy" aria-label="Tycoon Family Size für 69,99 Euro kaufen">Kaufen</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
     </main>
-  </body>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Toaster Tycoon GmbH. Alle Rechte vorbehalten.</p>
+            <nav class="footer-nav" aria-label="Rechtliche Informationen">
+                <ul>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="barrierefreiheit.html">Barrierefreiheitserklärung</a></li>
+                    <li><a href="urheberrecht.html">Urheberrechtserklärung</a></li>
+                    <li><a href="lizenz.html">Lizenzbedingungen</a></li>
+                    <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
 </html>

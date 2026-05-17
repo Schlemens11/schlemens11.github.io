@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css2?family=Boldonse&display=swap);
+
+/* ==========================================================================
+   1. BASICS & RESPONSIVE FUNDAMENTALS
+   ========================================================================== */
+:root {
+    --primary-color: #d35400; /* Tycoon Orange - Guter Kontrast auf Weiß/Dunkelgrau */
+    --primary-dark: #a04000;
+    --text-color: #2c3e50;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --footer-bg: #1a252f;
+    --footer-text: #ecf0f1;
+    --focus-ring: #0056b3; /* Kontrastierende Farbe für den Tastatur-Fokus */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+/* Skip-Link für Barrierefreiheit (unsichtbar bis fokussiert) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Globaler Fokus-Indikator für WCAG 2.2 Tastaturnavigation */
+a:focus-visible, 
+button:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: Boldonse;
+}
+
+.cart-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-link:hover {
+    background-color: #eee;
+}
+
+/* ==========================================================================
+   3. MAIN CONTENT & HERO
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE PRODUCT GRID
+   ========================================================================== */
+.product-grid {
+    display: grid;
+    /* Erstellt automatisch so viele Spalten wie Platz haben, mind. 250px breit */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Verhindert Verzerrung der Toaster-Bilder */
+    background-color: #eaeaea; /* Fallback, falls Bilder fehlen */
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Schiebt den Button immer nach unten, wenn Texte ungleich lang sind */
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto; /* Richtet Buttons in einer Reihe aus */
+    transition: background-color 0.2s;
+}
+
+.btn-buy:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Mobile Optimierung für den Footer */
+@media (max-width: 768px) {
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
